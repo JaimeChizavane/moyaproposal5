@@ -26,10 +26,19 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
       
+      <!--JQuery-->  
+<script type="text/javascript" src="whatsapp/jquery-3.3.1.min.js"></script>  
+<!--Floating WhatsApp css-->  
+<link rel="stylesheet" href="whatsapp/floating-wpp.min.css">  
+<!--Floating WhatsApp javascript-->  
+<script type="text/javascript" src="whatsapp/floating-wpp.min.js"></script>
+
+      
     <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
   </head>
   <body>
     
+         
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <img src="images/logo.png" />
@@ -42,6 +51,7 @@
 	        	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	        	<li class="nav-item"><a href="blog.html" class="nav-link">Partnership</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
@@ -87,7 +97,12 @@
       </div>
     </section>
 		
-		<section class="ftco-section ftc-no-pb">
+		
+<!--Div where the WhatsApp will be rendered-->  
+<div id="WAButton"></div> 
+      
+      
+<section class="ftco-section ftc-no-pb">
 			<div class="container">
 				<div class="row no-gutters">
 					<div class="col-md-5 p-md-5 img img-2" style="background-image: url(images/bg_3.jpg);">
@@ -753,6 +768,23 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#
       "/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script type="text/javascript">  
+   $(function () {
+           $('#WAButton').floatingWhatsApp({
+               phone: 'WHATSAPP-PHONE-NUMBER', //WhatsApp Business phone number
+               headerTitle: 'Chat with us on WhatsApp!', //Popup Title
+               popupMessage: 'Hello, how can we help you?', //Popup Message
+               showPopup: true, //Enables popup display
+               buttonImage: '<img src="whatsapp/whatsapp.svg" />', //Button Image
+               //headerColor: 'crimson', //Custom header color
+               //backgroundColor: 'crimson', //Custom background button color
+               position: "right" //Position: left | right
+
+           });
+       });
+</script>  
 
 
   <script src="js/jquery.min.js"></script>
